@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlackVan - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>BlackVan Dashboard</h1>
+  </header>
+  <main>
+    <section id="prenotazioni">
+      <h2>Nuova Prenotazione</h2>
+      <form id="formPrenotazione">
+        <input type="text" placeholder="Nome Cliente" required />
+        <input type="text" placeholder="Partenza" required />
+        <input type="text" placeholder="Destinazione" required />
+        <input type="datetime-local" required />
+        <button type="submit">Salva</button>
+      </form>
+      <div id="prenotazioniList"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
