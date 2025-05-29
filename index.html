@@ -2,46 +2,14 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BlackVan - Dashboard NCC</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>BlackVan - Login</title>
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>BlackVan - Pannello NCC</h1>
-    <button onclick="toggleSection('login')">Login</button>
-    <button onclick="toggleSection('dashboard')">Dashboard</button>
-    <button onclick="toggleSection('foglio')">Foglio di Bordo</button>
-  </header>
-
-  <main>
-    <section id="login" class="hidden">
-      <h2>Login Autista</h2>
-      <input id="username" type="text" placeholder="Username" />
-      <input id="password" type="password" placeholder="Password" />
-      <button onclick="login()">Accedi</button>
-    </section>
-
-    <section id="dashboard" class="hidden">
-      <h2>Dashboard Prenotazioni</h2>
-      <form id="formPrenotazione">
-        <input type="text" placeholder="Nome Cliente" required />
-        <input type="text" placeholder="Partenza" required />
-        <input type="text" placeholder="Destinazione" required />
-        <input type="datetime-local" required />
-        <button type="submit">Aggiungi Prenotazione</button>
-      </form>
-      <div id="prenotazioniList"></div>
-    </section>
-
-    <section id="foglio" class="hidden">
-      <h2>Foglio di Bordo Digitale</h2>
-      <textarea id="foglioDiBordo" placeholder="Scrivi qui note di viaggio..."></textarea>
-      <button onclick="salvaFoglio()">Salva</button>
-      <div id="foglioSalvato"></div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+  <h1>BlackVan - Login</h1>
+  <input id="email" type="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Password" />
+  <button onclick="login()">Accedi</button>
+  <div id="status"></div>
 </body>
 </html>
