@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <title>BlackVan - Login</title>
-  <script type="module" src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>BlackVan - MyVanBoard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>BlackVan - Login</h1>
-  <input id="email" type="email" placeholder="Email" />
-  <input id="password" type="password" placeholder="Password" />
-  <button onclick="login()">Accedi</button>
-  <div id="status"></div>
+  <header>
+    <h1>🚐 BlackVan - MyVanBoard</h1>
+    <nav>
+      <button onclick="mostra('dashboard')">Dashboard</button>
+      <button onclick="mostra('prenotazioni')">Prenotazioni</button>
+      <button onclick="mostra('foglio')">Foglio di Bordo</button>
+      <button onclick="mostra('profilo')">Profilo</button>
+    </nav>
+  </header>
+  <main>
+    <section id="dashboard" class="pagina">
+      <h2>Benvenuto su BlackVan</h2>
+      <p>Questa è la tua dashboard personale per gestire i servizi NCC.</p>
+    </section>
+    <section id="prenotazioni" class="pagina" style="display:none;">
+      <h2>Nuova Prenotazione</h2>
+      <form id="formPrenotazione">
+        <input type="text" id="cliente" placeholder="Nome Cliente" required>
+        <input type="text" id="partenza" placeholder="Partenza" required>
+        <input type="text" id="destinazione" placeholder="Destinazione" required>
+        <input type="date" id="data" required>
+        <input type="time" id="ora" required>
+        <input type="text" id="targa" placeholder="Targa Veicolo" required>
+        <button type="submit">Salva Prenotazione</button>
+      </form>
+      <ul id="listaPrenotazioni"></ul>
+    </section>
+    <section id="foglio" class="pagina" style="display:none;">
+      <h2>Foglio di Bordo</h2>
+      <div id="foglioDettaglio">Seleziona una prenotazione per vedere il dettaglio.</div>
+    </section>
+    <section id="profilo" class="pagina" style="display:none;">
+      <h2>Profilo Autista</h2>
+      <form>
+        <input type="text" placeholder="Nome" value="Mario Rossi">
+        <input type="text" placeholder="Veicolo" value="Mercedes Vito">
+        <input type="text" placeholder="Zona" value="Trento - Garda">
+        <input type="email" placeholder="Email" value="mario@ncc.com">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 BlackVan – Tutti i diritti riservati</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
